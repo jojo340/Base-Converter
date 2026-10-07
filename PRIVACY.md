@@ -2,7 +2,7 @@
 
 English | [中文](#中文)
 
-Effective date: June 11, 2026
+Effective date: October 7, 2026
 
 ## English
 
@@ -16,25 +16,28 @@ The app's core conversion features run on your device. The numbers you enter for
 
 ### Advertising
 
-Base Converter may display ads provided by Google AdMob.
+The free version uses Umeng U-AppWin on devices configured with the mainland China region (CN), and Unity Ads on other devices. This is a device-region setting, not detection of physical location. Pro users do not trigger new ad requests through the app.
 
-Google AdMob and related Google services may collect or process information such as device identifiers, advertising identifiers, approximate location, app interactions, diagnostics, and other data used to provide, measure, personalize, or improve ads, depending on your device settings, consent choices, region, and Google's policies.
+The mainland implementation includes UMUnionSDK, UMCommon and UMDevice. These SDKs may process device identifiers (such as IDFV, and IDFA only when permitted by App Tracking Transparency), network information, IP-derived approximate region, ad interactions and diagnostics for advertising, measurement and fraud prevention. The app does not request GPS location, contacts or an installed-app list for this integration.
 
-You can learn more about how Google uses information from apps that use its services here:
+For a free user on a mainland-China device, the first launch requires an explicit advertising choice before the app can be used. Umeng is initialized only after the user enables it. Pro users are ad-free and do not need to enable Umeng. Declining does not prevent conversions. You can revisit these settings from the Pro screen and withdraw consent. Withdrawal removes the app's ad view and stops new app-initiated requests. An already initialized SDK may continue internal processing; restarting the app with consent withdrawn prevents initialization. Withdrawal does not automatically delete previously transmitted data. Provider retention periods, deletion mechanisms and data rights are described in their policies; you can also contact the developer using the App Store support channel.
 
-https://policies.google.com/technologies/partner-sites
+Advertising-service consent is separate from App Tracking Transparency (ATT) authorization. After a user enables Umeng advertising, the app may request ATT authorization before initializing advertising. If authorization is denied, iOS does not make IDFA available; the app still initializes Umeng and may request ads without IDFA. Unity Ads is configured for non-behavioral advertising when ATT is denied. You can manage tracking permission in iOS Settings. This does not mean the advertising SDK processes no other data; refer to the provider policies for its actual data practices.
 
-You can manage ad personalization through your iOS device settings and Google account settings where available.
+Provider privacy policies:
+
+- Umeng: https://www.umeng.com/page/policy
+- Unity: https://unity.com/legal/privacy-policy
 
 ### Analytics
 
-Base Converter does not include a separate analytics service operated by us. However, advertising SDKs may provide aggregated ad performance, diagnostics, or measurement information.
+Base Converter does not operate a separate analytics service. The Umeng initialization disables optional analytics and ASA attribution; advertising SDKs may still process ad performance, diagnostics and measurement information.
 
 ### Data Sharing
 
 We do not sell personal information. We do not operate our own user account system or user database for Base Converter.
 
-Information related to ads may be processed by Google AdMob and its service providers according to their own policies and applicable laws.
+Information related to ads may be processed by Umeng, Unity and their advertising partners according to their policies and applicable laws. Device-region routing does not guarantee that all provider data remains in China; review provider processing and any cross-border requirements before release.
 
 ### Children
 
@@ -56,7 +59,7 @@ If you have questions about this Privacy Policy, please contact the developer th
 
 ## 中文
 
-生效日期：2026 年 6 月 11 日
+生效日期：2026 年 10 月 7 日
 
 Base Converter 是一款用于十进制、十六进制和二进制表示转换的工具应用。本隐私政策说明你使用本应用时，相关信息可能如何被处理。
 
@@ -68,25 +71,28 @@ Base Converter 不要求你创建账号、登录或提供个人信息。
 
 ### 广告
 
-Base Converter 可能展示由 Google AdMob 提供的广告。
+免费版本在设备地区设为中国大陆（CN）时使用友盟 U-AppWin，其他地区使用 Unity Ads。这是设备地区设置，不是实际位置检测。Pro 用户不通过本应用触发新广告请求。
 
-Google AdMob 及相关 Google 服务可能会根据你的设备设置、同意选择、所在地区和 Google 政策，收集或处理设备标识符、广告标识符、大致位置、应用交互、诊断信息，以及用于提供、衡量、个性化或改进广告的其他数据。
+大陆接入包含 UMUnionSDK、UMCommon 和 UMDevice。这些 SDK 可能处理设备标识符（如 IDFV；IDFA 仅在 ATT 允许时使用）、网络信息、IP 推断的大致地区、广告交互及诊断数据，用于广告投放、衡量和反作弊。本次接入不为广告请求 GPS、通讯录或已安装应用列表权限。
 
-你可以通过以下页面了解 Google 如何使用来自使用其服务的应用的信息：
+对于设备地区为中国大陆的免费用户，首次启动时必须先明确选择广告选项，之后才能使用应用。友盟仅在你明确启用后初始化；已购买 Pro 的用户自动免广告，不需要启用友盟。拒绝不影响转换功能。你可以从 Pro 页面重新打开“广告与隐私”并撤回同意。撤回后移除广告视图，停止本应用发起的新请求；已经初始化的 SDK 可能仍进行内部处理，撤回后重新启动应用将不再初始化。撤回不会自动删除此前已发送的数据。服务商数据保留期限、删除方式及数据权利见其政策；也可以通过 App Store 的开发者支持渠道联系我们。
 
-https://policies.google.com/technologies/partner-sites
+广告服务授权与 App 跟踪透明度（ATT）授权相互独立。启用友盟广告后，本应用可能会在初始化广告前请求 ATT 授权；如果拒绝，iOS 不会提供 IDFA，但应用仍会初始化友盟并请求不使用 IDFA 的广告。Unity Ads 在 ATT 拒绝时会被配置为非行为广告。你可以在 iOS 设置中管理跟踪权限。这不代表广告 SDK 不再处理任何其他数据；具体处理范围以服务商政策为准。
 
-在可用的情况下，你可以通过 iOS 设备设置和 Google 账号设置管理广告个性化选项。
+服务商隐私政策：
+
+- 友盟：https://www.umeng.com/page/policy
+- Unity：https://unity.com/legal/privacy-policy
 
 ### 分析
 
-Base Converter 不包含由我们单独运营的分析服务。不过，广告 SDK 可能会提供汇总的广告效果、诊断或衡量信息。
+Base Converter 不单独运营分析服务。友盟初始化时关闭可选统计与 ASA 归因；广告 SDK 仍可能处理广告效果、诊断与衡量信息。
 
 ### 数据共享
 
 我们不会出售个人信息。我们没有为 Base Converter 运营自己的用户账号系统或用户数据库。
 
-与广告相关的信息可能会由 Google AdMob 及其服务提供商根据其自身政策和适用法律进行处理。
+与广告相关的信息可能会由友盟、Unity 及其广告合作方根据自身政策和适用法律处理。按设备地区切换不能保证服务商的全部数据留在境内；上线前应核对其实际处理和跨境要求。
 
 ### 儿童
 
